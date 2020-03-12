@@ -1,5 +1,7 @@
 :root {
   font: 16px / 1 sans-serif;
+  --downtown-top-gradient: rgba(255, 224, 102, .75);
+  --downtown-bottom-gradient: rgba(242, 95, 92, 0.75);
 }
 
 html {
@@ -9,4 +11,71 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+}
+
+.topNav {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #397ba0;
+  background-color: #f8e067;
+  width: 100%;
+  margin: 0;
+  font-weight: 600;
+}
+
+.topNav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.topNav li {
+  padding: 1rem;
+}
+
+.downtown {
+  background-image: url(./images/downtown.jpg);
+  height: 100vh;
+  /* vh view height of window (takes up 100% of screen top to bottom)*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  /* background size */
+  color: #397ba0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.downtown p {
+  background: linear-gradient(var(--downtown-top-gradient), var(--downtown-bottom-gradient));
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--header-text-color);
+}
+
+img {
+  height: auto;
+  width: 100%;
+  align-content: center;
+}
+
+section.featured ul li {
+  list-style: none;
+}
+
+section.featured ul {
+  margin: 0;
+  padding: 0;
+}
+
+section.topDestinations ul li {
+  list-style: none;
+}
+
+section.topDestinations ul {
+  margin: 0;
+  padding: 0;
 }
